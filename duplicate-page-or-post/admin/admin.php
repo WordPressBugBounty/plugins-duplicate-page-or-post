@@ -119,15 +119,15 @@ class wpda_duplicate_post_admin_panel{
 	}
 
 	public function featured_plugins_js_css() {
-        wp_enqueue_style('wpda_chart_featured_page_css', wpda_duplicate_post_plugin_url . 'admin/css/featured_plugins_css.css');
+        wp_enqueue_style('wpda_duplicate_post_featured_page_css', wpda_duplicate_post_plugin_url . 'admin/css/featured_plugins_css.css');
     }
 
     public function featured_themes_js_css() {
-        wp_enqueue_style('wpda_chart_featured_themes_page_css', wpda_duplicate_post_plugin_url . 'admin/css/featured_themes_css.css');
+        wp_enqueue_style('wpda_duplicate_post_featured_themes_page_css', wpda_duplicate_post_plugin_url . 'admin/css/featured_themes_css.css');
     }
 
     public function hire_expert_js_css() {
-        wp_enqueue_style('wpda_chart_hire_expert_css', wpda_duplicate_post_plugin_url . 'admin/css/hire_expert.css');
+        wp_enqueue_style('wpda_duplicate_post_hire_expert_css', wpda_duplicate_post_plugin_url . 'admin/css/hire_expert.css');
     }
 
 	/*###################### Options page function ##################*/	
