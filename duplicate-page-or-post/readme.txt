@@ -3,8 +3,8 @@ Contributors: wpdevart
 Donate link: https://wpdevart.com/
 Tags: duplicate page, duplicate post, clone, clone page, clone post
 Requires at least: 3.4.0
-Tested up to: 6.6
-Stable tag: 1.5.6
+Tested up to: 6.5
+Stable tag: 1.5.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -302,3 +302,7 @@ Unfortunately, at this moment there isn't such functionality, but we will try to
 = 1.5.6 =
 
 *  The poll plugin has been removed from the recommended list.
+
+= 1.5.7 =
+
+*  bug fixed
