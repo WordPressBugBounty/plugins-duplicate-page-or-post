@@ -55,9 +55,8 @@ class wpda_duplicate_post_admin_panel{
 		add_action('admin_print_styles-' . $featured_page, array($this, 'featured_plugins_js_css'));
         add_action('admin_print_styles-' . $featured_theme_page, array($this, 'featured_themes_js_css'));
         add_action('admin_print_styles-' . $hire_expert, array($this, 'hire_expert_js_css'));	
-		if(isset($submenu['wpda_duplicate_post_menu']))
+		if(isset($submenu['wpda_duplicate_post_menu'])){
 			add_submenu_page( 'wpda_duplicate_post_menu', __( 'Support or Any Ideas?', 'wpda_duplicate' ), '<span style="color:#00ff66" >'.__( 'Support or Any Ideas?', 'wpda_duplicate' ).'</span>', 'manage_options',"wpdevart_comingsoon_any_ideas",array($this, 'any_ideas'),155);
-		if (isset($submenu['wpda_duplicate_post_menu'])) {
 			$count_pages = count($submenu['wpda_duplicate_post_menu'])-1;
 			$submenu['wpda_duplicate_post_menu'][$count_pages][2] = wpdevart_duplicate_post_support_url;
 		}

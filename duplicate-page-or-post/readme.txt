@@ -4,7 +4,7 @@ Donate link: https://wpdevart.com/
 Tags: duplicate page, duplicate post, clone, clone page, clone post
 Requires at least: 3.4.0
 Tested up to: 6.7
-Stable tag: 1.5.9
+Stable tag: 1.6.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -314,3 +314,7 @@ Unfortunately, at this moment there isn't such functionality, but we will try to
 = 1.5.9 =
 
 *  changed stable tag
+
+= 1.6.0 =
+
+*  code improved
