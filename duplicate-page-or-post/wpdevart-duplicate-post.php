@@ -4,56 +4,51 @@
 * Plugin URI: https://wpdevart.com/
 * Author URI: https://wpdevart.com/ 
 * Description: Duplicate Page or Post is an great tool that allow to duplicate pages and posts. Now you can do it in one click.
-* Version: 1.6.0
+* Version: 1.6.1
 * Author: wpdevart
 * License: GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
 */
 
-class wpda_duplicate_post{
+class wpda_duplicate_post {
 
 	public $admin_menu;
-	
-	function __construct(){		
-		
+
+	function __construct() {
+
 		$this->define_constants();
 		// include files 
 		$this->include_files();
 		// call filters for plugin
 		$this->call_base_filters();
 		// crate admin panel	
-		$this->create_admin();	
-	}	
+		$this->create_admin();
+	}
 
-    /*###################### Creating admin function ##################*/	
-	
-	private function create_admin(){
+	/*###################### Creating admin function ##################*/
+
+	private function create_admin() {
 		// create admin menu		
-		$this->admin_menu = new wpda_duplicate_post_admin_panel();		
+		$this->admin_menu = new wpda_duplicate_post_admin_panel();
 	}
-	
-	public function registr_requeried_scripts(){		
 
+	public function plugin_multilanguage() {
+		load_plugin_textdomain('wpda_duplicate', FALSE, basename(dirname(__FILE__)) . '/languages');
 	}
-	public function plugin_multilanguage(){	
-		load_plugin_textdomain( 'wpda_duplicate', FALSE, basename(dirname(__FILE__)).'/languages' );
+	/*###################### Call base filters function ##################*/
+
+	private function call_base_filters() {
+		add_action('init',  array($this, 'plugin_multilanguage'));
 	}
-	/*###################### Call base filters function ##################*/	
-		
-	private function call_base_filters(){
-		add_action('init',  array($this,'registr_requeried_scripts') );
-		add_action('init',  array($this,'plugin_multilanguage') );
+	private function define_constants() {
+		define('wpda_duplicate_post_plugin_url', trailingslashit(plugins_url('', __FILE__)));
+		define('wpda_duplicate_post_plugin_path', trailingslashit(plugin_dir_path(__FILE__)));
+		define('wpdevart_duplicate_post_support_url', "https://wordpress.org/support/plugin/duplicate-page-or-post/");
 	}
-  	private function define_constants(){
-		 define('wpda_duplicate_post_plugin_url',trailingslashit( plugins_url('', __FILE__ ) ));
-		 define('wpda_duplicate_post_plugin_path',trailingslashit( plugin_dir_path( __FILE__ ) ));
-		 define('wpdevart_duplicate_post_support_url',"https://wordpress.org/support/plugin/duplicate-page-or-post/");		
-	}	
-	
-    /*###################### Function for including files ##################*/		
-	
-	private function include_files(){
-		require_once(wpda_duplicate_post_plugin_path.'admin/admin.php'); 	
+
+	/*###################### Function for including files ##################*/
+
+	private function include_files() {
+		require_once(wpda_duplicate_post_plugin_path . 'admin/admin.php');
 	}
 }
 $wpda_duplicate_post = new wpda_duplicate_post();
-?>
