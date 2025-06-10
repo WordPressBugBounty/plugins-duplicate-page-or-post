@@ -3,8 +3,8 @@ Contributors: wpdevart
 Donate link: https://wpdevart.com/
 Tags: duplicate page, duplicate post, clone, clone page, clone post
 Requires at least: 3.4.0
-Tested up to: 6.7
-Stable tag: 1.6.2
+Tested up to: 6.8
+Stable tag: 1.6.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -325,4 +325,12 @@ Unfortunately, at this moment there isn't such functionality, but we will try to
 
 = 1.6.2 =
 
-*  bug fixed
+*  code improved
+
+= 1.6.3 =
+
+*  code improved
+
+= 1.6.4 =
+
+*  tested
